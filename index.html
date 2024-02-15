@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>soup bio link's</title>
+    <link href="superhero.css" rel="stylesheet">
+    <link rel="icon" href="assets/High_School_DxD_logo.webp" type="image/png">
+    <link rel="shortcut icon" href="assets/Screenshot 2023-09-28 180903.png" type="image/webp"> <!--the tab image -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body> 
+
+<!--BACKGROUND-->
+<video autoplay loop muted id="video-background">
+<source src="assets/yae-miko-lying-down-relaxing-genshin-impact-moewalls-com (1).mp4" type="video/mp4">
+Your browser does not support the audio element.
+</video>
+ <!--BACKGROUND-->
+
+
+
+<div class="container">
+
+    <!--LINKS-->         <!--JUMPSCARE ID BELOW-->   
+    <a href="#" class="links" id="gifLink">
+    <i class='bx bx-game' ></i>ℙ𝕃𝔸𝕐 ℕ𝕆𝕎</a>
+
+
+    <a href="https://www.instagram.com/510soup/" class="links" target="_blank">
+    <i class='bx bxl-instagram' ></i>𝚒𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖
+    </a>
+
+    <a href="https://discord.gg/DjJgNtG3Re" class="links" target="_blank">
+    <i class='bx bxl-discord-alt'></i> 𝚍𝚒𝚜𝚌𝚘𝚛𝚍
+    </a>
+    <a href="https://cash.app/$OsenOran" class="links" target="_blank">
+    <i class='bx bx-credit-card' ></i>𝚌𝚊𝚜𝚑𝚊𝚙𝚙
+    </a>
+    <!--LINKS-->
+    
+
+    <!--PFP-->
+    <div class="profile-pic">
+    <img src="assets/untitled.png" alt="TAI PARADISE">
+    </div>
+
+    <!--myade by big soup-->
+    <div class= 'my-profilename'>
+        <h2>𝖍𝖊𝖓𝖙𝖆𝖎 𝖑𝖔𝖛𝖊𝖗</h2>
+    </div>
+
+    <!--myade by big soup-->
+
+</div>
+
+
+
+
+ 
+<div id="overlay">
+<div id="message">⚬ click to enter ⚬</div>
+</div>   
+
+<div id="content">   
+</div>
+
+
+
+
+
+ 
+<div class="fullscreen" id="fullscreenGif">
+    <img src="assets/scary-shocking-face-frgvqfiuhgivzlk4.gif" alt="Fullscreen GIF">
+    <audio id="audioPlayer" src="assets/546456 (1).mp3" preload="auto"></audio>
+</div>
+
+<script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var fullscreenGif = document.getElementById('fullscreenGif');
+    var isPlaying = false;
+
+    document.getElementById('gifLink').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        if (!isPlaying) {
+            fullscreenGif.style.display = 'block';
+            document.documentElement.requestFullscreen();
+            audioPlayer.play();
+            isPlaying = true;
+
+            setTimeout(function () {
+                fullscreenGif.style.display = 'none';
+                document.exitFullscreen();
+                audioPlayer.pause();
+                isPlaying = false;
+            }, 3000); 
+        }
+    });
+</script>
+
+
+
+<script>
+    document.addEventListener("keydown", function(e) {
+        if ((e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.shiftKey && e.key === "J")) {
+            for (let i = 0; i < 5; i++) {
+                window.open("https://www.hentaiheroes.com/?ref_id=135846&noagev=1&tc1=HHd3312dbcee33690aebce41311c9b823c&tc2=16805&tc3=300&tc4=SOI&tc5=HPfNative&tc6=HPfrSiaSiberia&tc7=&tc8=&clickid=HHd3312dbcee33690aebce41311c9b823c&clickoid=300", "_blank");
+            }
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+</script>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var overlay = document.getElementById("overlay");
+    var audio = document.getElementById("audio");
+
+    overlay.addEventListener("click", function () {
+      overlay.style.opacity = "0";
+      audio.style.opacity = "1"; // Set audio element opacity to 1
+      setTimeout(function () {
+        overlay.style.display = "none";
+        document.body.style.overflow = "auto";
+        audio.play();
+      }, 500);
+    });
+  });
+</script>
+
+<audio id="audio" loop>
+  <source src="assets/palace.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+   
+    function disableRightClick(event) {
+        event.preventDefault();
+    }
+    document.addEventListener('contextmenu', disableRightClick);
+</script>
+
+
+
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&display=swap') ;
+
+
+
+body {
+margin: 0;
+overflow: hidden; 
+overflow: hidden;
+cursor: url('https://cur.cursors-4u.net/games/gam-4/gam307.png'), auto !important;
+}
+
+
+
+.fullscreen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: rgba(0, 0, 0, 0.8);
+display: none;
+ }
+.fullscreen img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+       
+#content {
+text-align: center;
+padding: 100px;
+color: white;
+font-size: 24px;
+}
+
+
+.container {
+position: relative;
+}
+
+.profile-pic{
+    position:absolute;
+    top: -370px;
+    size: 100%;
+    transform: scale(0.2);
+    filter: drop-shadow(2px 3px 10px black);
+ 
+}
+
+
+
+.my-profilename{
+    position: relative;
+    text-align: center;
+    top: -89px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(41, 29, 29);
+    filter: drop-shadow(2px 3px 10px black);
+}
+
+.links{
+    position: relative;
+    bottom: -310px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid  rgb(255, 235, 122);
+    border-width: 3px;
+    width: 520px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    padding: 20px;
+    filter: drop-shadow(2px 3px 10px black);
+    
+}
+
+
+
+
+
+
+a{ 
+    font-weight: bolder;
+    font-size: 20px;
+    color:  rgb(255, 235, 122);
+    text-decoration: none;
+    transition: color 0.2s, transform 0.5s;
+}
+
+
+.bio-1{
+    position: absolute;
+    left:710px ;
+    transform: scale(2.9);
+    top: 340px;
+    color: rgb(255, 235, 122);;
+
+
+
+}
+
+a:hover{
+    color: rgb(255, 194, 242);
+    background-color: rgb(255, 235, 122);
+    transform: scale(1.1);
+}
+
+#video-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+object-fit: cover; 
+}
+
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgb(101, 92, 111);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+opacity: 1; 
+transition: opacity 0.5s; 
+pointer-events: auto; 
+}
+
+#message {
+font-size: 24px;
+color: rgb(173, 148, 165);
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*RESIZE TOI SCREEN*/
+
+@media (max-width: 840px) {
+    .links {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+    }
+
+    
+}
+
+
+/*PFP's MEDIA SIZE*/
+@media (max-width: 1740px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: 180px;
+        top: -380px;
+    }
+
+    
+}
+
+@media (max-width: 1394px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: 100px;
+        top: -380px;
+    }
+
+    
+}
+
+
+
+@media (max-width: 1140px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: 50px;
+        top: -380px;
+    }
+
+    
+}
+
+@media (max-width: 840px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: -80px;
+        top: -380px;
+    }
+
+    
+}
+
+@media (max-width: 430px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: -100px;
+        top: -380px;
+    }
+
+    
+}
+
+@media (max-width: 390px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        left: -120px;
+        top: -380px;
+    }
+
+    
+}
+
+
+
+
+@media (max-height: 817px) {
+    .profile-pic {
+        width: 70%; 
+        border-radius: 20px; 
+        padding: 10px; 
+        top: -400px;
+    }
+
+    
+}
+
+
+
+
+@media (max-width: 840px) {
+    .my-profilename{
+        top: -9px;
+    }
+
+    
+}
+</style>
+</body>
+
+</html>
+
+
+
