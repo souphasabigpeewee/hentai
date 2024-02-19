@@ -14,9 +14,8 @@
 <body> 
 
 <!--BACKGROUND-->
-<video autoplay loop muted playsinline id="video-background" controls=0>
+<video autoplay loop muted playsinline id="video-background">
     <source src="assets/Yae-Miko-Lying-Down-Relaxing-Genshin-Impact-Moewalls-Com (1).mp4" type="video/mp4">
-    Your browser does not support the audio element.
 </video>
 <!--BACKGROUND-->
 
@@ -79,6 +78,18 @@
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var video = document.getElementById('video-background');
+    
+    // Remove controls for PC browsers
+    video.removeAttribute('controls');
+    
+    // Remove controls for iOS devices
+    video.controlsList = 'nodownload';
+});
+
+</script>
 
     
 <script>
