@@ -80,10 +80,11 @@
 
  
 <div class="fullscreen" id="fullscreenGif">
-    <img src="assets/scary-mumbling-ghost-c42ncebjyhpszw5t.gif" alt="Fullscreen GIF">
-    <audio id="audioPlayer" src="assets/jumpscare-68730.mp3" preload="auto"></audio>
+    <img src="assets/scary-shocking-face-frgvqfiuhgivzlk4.gif" alt="Fullscreen GIF">
+    <audio id="audioPlayer" src="assets/546456 (1).mp3" preload="auto"></audio>
 </div>
 
+<button id="gifLink">Click to play</button>
 
 <script>
     var audioPlayer = document.getElementById('audioPlayer');
@@ -104,10 +105,19 @@
                 document.exitFullscreen();
                 audioPlayer.pause();
                 isPlaying = false;
-            }, 900); 
+            }, 3000); 
+        }
+    });
+
+    // For iOS devices, trigger audio playback on user interaction
+    document.body.addEventListener('click', function() {
+        if (!isPlaying) {
+            audioPlayer.play();
+            isPlaying = true;
         }
     });
 </script>
+
 
 
 
