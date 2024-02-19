@@ -84,7 +84,7 @@ object-fit: cover;
 
     <!--PFP-->
     <div class="profile-pic">
-    <img src="assets/gosha.png" alt="gosha">
+    <img src="assets/Comp 1_00013.png" alt="hentai">
     </div>
 
     <!--myade by big soup-->
@@ -194,20 +194,25 @@ object-fit: cover;
 
 }
 
-.fullscreen {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 9999;
-background-color: rgba(0, 0, 0, 0.8);
-display: none;
- }
-.fullscreen img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+ body {
+            margin: 0;
+            overflow: hidden; /* no scroll */
+            cursor: url('https://cur.cursors-4u.net/others/oth-8/oth704.cur'), auto !important;
+            background-color: black;
+        }
+
+    #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover; 
+}
+
+html{
+cursor: url('assets/gosha.png'), auto;
 }
 
        
@@ -238,19 +243,19 @@ position: relative;
 .my-profilename{
     position: relative;
     text-align: center;
-    top: -69px; 
-    font-size: 25px;
+    top: -39px; 
+    font-size: 20px;
     font-weight: bold;
-    color: rgb(25, 16, 12);
+    color: rgb(119, 69, 69);
     filter: drop-shadow(2px 3px 10px black);
 }
 
 .links{
     position: relative;
-    bottom: -310px;
+    bottom: -350px;
     text-align: center;
     margin-top: 20px;
-    border: 1px solid  rgb(255, 235, 122);
+    border: 1px solid  rgb(119, 69, 69);
     border-width: 3px;
     width: 520px;
     
@@ -271,7 +276,7 @@ position: relative;
 a{ 
     font-weight: bolder;
     font-size: 20px;
-    color:  rgb(255, 235, 122);
+    color:  rgb(114, 61, 61);
     text-decoration: none;
     transition: color 0.2s, transform 0.5s;
 }
@@ -282,26 +287,16 @@ a{
     left:710px ;
     transform: scale(2.9);
     top: 340px;
-    color: rgb(255, 235, 122);;
+    color: rgb(101, 55, 55);;
 
 
 
 }
 
 a:hover{
-    color: rgb(255, 194, 242);
-    background-color: rgb(255, 235, 122);
+    color: rgb(195, 122, 122);
+    
     transform: scale(1.1);
-}
-
-#video-background {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-object-fit: cover; 
 }
 
 #overlay {
@@ -310,7 +305,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgb(101, 92, 111);
+background: rgb(75, 53, 53);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -322,7 +317,7 @@ pointer-events: auto;
 
 #message {
 font-size: 24px;
-color: rgb(173, 148, 165);
+color: rgb(0, 0, 0);
 cursor: pointer;
 }
 
@@ -353,7 +348,7 @@ cursor: pointer;
         border-radius: 20px; 
         padding: 10px; 
         left: 180px;
-        
+        top: -380px;
     }
 
     
@@ -365,7 +360,7 @@ cursor: pointer;
         border-radius: 20px; 
         padding: 10px; 
         left: 100px;
-        
+        top: -380px;
     }
 
     
@@ -379,7 +374,7 @@ cursor: pointer;
         border-radius: 20px; 
         padding: 10px; 
         left: 50px;
-        
+        top: -380px;
     }
 
     
@@ -391,7 +386,7 @@ cursor: pointer;
         border-radius: 20px; 
         padding: 10px; 
         left: -80px;
-       
+        top: -380px;
     }
 
     
@@ -403,7 +398,7 @@ cursor: pointer;
         border-radius: 20px; 
         padding: 10px; 
         left: -100px;
-        
+        top: -380px;
     }
 
     
@@ -443,13 +438,11 @@ cursor: pointer;
         top: 5px;
     }
 
-    
-}
-
 </style>
 
 </body>
 </html>
+
 
 
 
