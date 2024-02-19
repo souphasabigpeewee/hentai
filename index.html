@@ -78,27 +78,7 @@
 </div>
 
 
-<script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-    var video = document.getElementById('video-background');
-    
-    // Check if the video is playing
-    function checkVideoPlaying() {
-        if (video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2) {
-            // Video is playing, remove controls
-            video.removeAttribute('controls');
-        } else {
-            // Video is not playing, wait and check again
-            setTimeout(checkVideoPlaying, 50);
-        }
-    }
-    
-    // Call the function to check if the video is playing
-    checkVideoPlaying();
-});
-
-</script>
 
     
 <script>
